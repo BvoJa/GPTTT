@@ -1,0 +1,21 @@
+vocab_size: 65
+cfg:
+  seed: 1337
+  data:
+    batch_size: 64
+    block_size: 256
+    data_path: input.txt
+  model:
+    block_size: 256
+    n_embd: 384
+    n_head: 6
+    n_layer: 6
+    dropout: 0.2
+    learning_rate: 0.0003
+  trainer:
+    max_steps: 500
+    val_check_interval: 200
+    log_every_n_steps: 50
+    accelerator: auto
+    devices: 2
+    strategy: ddp
