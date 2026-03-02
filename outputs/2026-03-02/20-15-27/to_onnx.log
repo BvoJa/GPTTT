@@ -1,0 +1,454 @@
+[2026-03-02 20:15:35,218][onnxscript.version_converter][WARNING] - The model version conversion is not supported by the onnxscript version converter and fallback is enabled. The model will be converted using the onnx C API (target version: 14).
+[2026-03-02 20:15:35,309][onnxscript.version_converter][WARNING] - Failed to convert the model to the target version 14 using the ONNX C API. The model was not modified
+Traceback (most recent call last):
+  File "/home/bvoja/Documents/CodingCorner/gpt/.venv/lib/python3.11/site-packages/onnxscript/version_converter/__init__.py", line 120, in call
+    converted_proto = _c_api_utils.call_onnx_api(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bvoja/Documents/CodingCorner/gpt/.venv/lib/python3.11/site-packages/onnxscript/version_converter/_c_api_utils.py", line 65, in call_onnx_api
+    result = func(proto)
+             ^^^^^^^^^^^
+  File "/home/bvoja/Documents/CodingCorner/gpt/.venv/lib/python3.11/site-packages/onnxscript/version_converter/__init__.py", line 115, in _partial_convert_version
+    return onnx.version_converter.convert_version(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bvoja/Documents/CodingCorner/gpt/.venv/lib/python3.11/site-packages/onnx/version_converter.py", line 39, in convert_version
+    converted_model_str = C.convert_version(model_str, target_version)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: /github/workspace/onnx/version_converter/adapters/no_previous_version.h:26: adapt: Assertion `false` failed: No Previous Version of LayerNormalization exists
+[2026-03-02 20:15:35,321][onnx_ir.passes.common.unused_removal][INFO] - Removed 9 unused nodes
+[2026-03-02 20:15:35,323][onnx_ir.passes.common.unused_removal][INFO] - No unused functions to remove
+[2026-03-02 20:15:35,327][onnxscript.optimizer._constant_folding][INFO] - Skipping constant folding for node 'node_Shape_0' because it is graph input to preserve graph signature
+[2026-03-02 20:15:35,327][onnxscript.optimizer._constant_folding][INFO] - Skipping constant folding for node 'node_embedding' because it is graph input to preserve graph signature
+[2026-03-02 20:15:35,522][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,526][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,536][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,540][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,550][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,554][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,564][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,568][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,578][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,583][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,593][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,598][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,616][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,621][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,631][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,636][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,647][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,652][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,664][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,669][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,681][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,688][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,700][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,706][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,727][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,732][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,744][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,750][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,762][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,768][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,780][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,786][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,799][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,804][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,817][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,822][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,844][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,850][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,863][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,869][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,882][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,888][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,901][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,907][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,920][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,926][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,939][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,945][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,970][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,976][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,989][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:35,995][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,008][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,014][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,028][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,034][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,047][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,053][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,067][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,073][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,096][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,102][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,116][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,122][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,136][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,142][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,156][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,163][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,177][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,184][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,198][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,204][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,233][onnx_ir.passes.common.unused_removal][INFO] - Removed 341 unused nodes
+[2026-03-02 20:15:36,243][onnx_ir.passes.common.unused_removal][INFO] - No unused functions to remove
+[2026-03-02 20:15:36,244][onnxscript.optimizer._constant_folding][INFO] - Skipping constant folding for node 'node_Shape_0' because it is graph input to preserve graph signature
+[2026-03-02 20:15:36,245][onnxscript.optimizer._constant_folding][INFO] - Skipping constant folding for node 'node_embedding' because it is graph input to preserve graph signature
+[2026-03-02 20:15:36,330][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,332][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,340][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,343][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,351][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,353][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,361][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,364][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,376][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,381][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,393][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,396][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,412][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,414][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,422][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,425][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,433][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,436][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,444][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,447][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,456][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,459][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,468][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,471][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,488][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,492][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,508][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,512][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,521][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,524][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,534][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,537][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,546][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,549][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,558][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,561][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,578][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,581][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,591][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,594][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,603][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,606][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,616][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,619][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,628][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,631][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,641][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,644][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,662][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,666][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,676][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,679][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,688][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,691][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,700][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,703][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,712][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,715][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,724][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,727][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,744][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,747][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,756][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,759][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,768][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,770][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,780][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,782][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,792][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,795][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,804][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,809][onnxscript.rewriter.rules.common._collapse_slices][INFO] - The value 'start', 'end', 'axis', 'step' is not statically known.
+[2026-03-02 20:15:36,843][onnx_ir.passes.common.unused_removal][INFO] - Removed 72 unused nodes
+[2026-03-02 20:15:36,851][onnx_ir.passes.common.unused_removal][INFO] - No unused functions to remove
+[2026-03-02 20:15:36,873][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_40' with existing initializer 'val_18'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_48' with existing initializer 'val_27'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_1' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_50' with existing initializer 'val_30'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_60' with existing initializer 'val_18'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_68' with existing initializer 'val_27'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_2' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_70' with existing initializer 'val_30'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_80' with existing initializer 'val_18'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_88' with existing initializer 'val_27'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_3' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_90' with existing initializer 'val_30'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_100' with existing initializer 'val_18'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_108' with existing initializer 'val_27'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_4' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_110' with existing initializer 'val_30'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_120' with existing initializer 'val_18'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_128' with existing initializer 'val_27'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_5' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_130' with existing initializer 'val_30'
+[2026-03-02 20:15:36,874][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_150' with existing initializer 'val_18'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_158' with existing initializer 'val_27'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_6' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_160' with existing initializer 'val_30'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_170' with existing initializer 'val_18'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_178' with existing initializer 'val_27'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_7' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_180' with existing initializer 'val_30'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_190' with existing initializer 'val_18'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_198' with existing initializer 'val_27'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_8' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_200' with existing initializer 'val_30'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_210' with existing initializer 'val_18'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_218' with existing initializer 'val_27'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_9' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_220' with existing initializer 'val_30'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_230' with existing initializer 'val_18'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_238' with existing initializer 'val_27'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_10' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_240' with existing initializer 'val_30'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_250' with existing initializer 'val_18'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_258' with existing initializer 'val_27'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_11' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_260' with existing initializer 'val_30'
+[2026-03-02 20:15:36,875][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_280' with existing initializer 'val_18'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_288' with existing initializer 'val_27'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_12' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_290' with existing initializer 'val_30'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_300' with existing initializer 'val_18'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_308' with existing initializer 'val_27'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_13' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_310' with existing initializer 'val_30'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_320' with existing initializer 'val_18'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_328' with existing initializer 'val_27'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_14' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_330' with existing initializer 'val_30'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_340' with existing initializer 'val_18'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_348' with existing initializer 'val_27'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_15' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_350' with existing initializer 'val_30'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_360' with existing initializer 'val_18'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_368' with existing initializer 'val_27'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_16' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_370' with existing initializer 'val_30'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_380' with existing initializer 'val_18'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_388' with existing initializer 'val_27'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_17' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_390' with existing initializer 'val_30'
+[2026-03-02 20:15:36,876][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_410' with existing initializer 'val_18'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_418' with existing initializer 'val_27'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_18' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_420' with existing initializer 'val_30'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_430' with existing initializer 'val_18'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_438' with existing initializer 'val_27'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_19' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_440' with existing initializer 'val_30'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_450' with existing initializer 'val_18'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_458' with existing initializer 'val_27'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_20' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_460' with existing initializer 'val_30'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_470' with existing initializer 'val_18'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_478' with existing initializer 'val_27'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_21' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_480' with existing initializer 'val_30'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_490' with existing initializer 'val_18'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_498' with existing initializer 'val_27'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_22' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_500' with existing initializer 'val_30'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_510' with existing initializer 'val_18'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_518' with existing initializer 'val_27'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_23' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_520' with existing initializer 'val_30'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_540' with existing initializer 'val_18'
+[2026-03-02 20:15:36,877][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_548' with existing initializer 'val_27'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_24' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_550' with existing initializer 'val_30'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_560' with existing initializer 'val_18'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_568' with existing initializer 'val_27'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_25' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_570' with existing initializer 'val_30'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_580' with existing initializer 'val_18'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_588' with existing initializer 'val_27'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_26' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_590' with existing initializer 'val_30'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_600' with existing initializer 'val_18'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_608' with existing initializer 'val_27'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_27' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_610' with existing initializer 'val_30'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_620' with existing initializer 'val_18'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_628' with existing initializer 'val_27'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_28' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_630' with existing initializer 'val_30'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_640' with existing initializer 'val_18'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_648' with existing initializer 'val_27'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_29' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_650' with existing initializer 'val_30'
+[2026-03-02 20:15:36,878][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_670' with existing initializer 'val_18'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_678' with existing initializer 'val_27'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_30' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_680' with existing initializer 'val_30'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_690' with existing initializer 'val_18'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_698' with existing initializer 'val_27'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_31' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_700' with existing initializer 'val_30'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_710' with existing initializer 'val_18'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_718' with existing initializer 'val_27'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_32' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_720' with existing initializer 'val_30'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_730' with existing initializer 'val_18'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_738' with existing initializer 'val_27'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_33' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_740' with existing initializer 'val_30'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_750' with existing initializer 'val_18'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_758' with existing initializer 'val_27'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_34' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_760' with existing initializer 'val_30'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_770' with existing initializer 'val_18'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_778' with existing initializer 'val_27'
+[2026-03-02 20:15:36,879][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'scalar_tensor_default_35' with existing initializer 'scalar_tensor_default'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_780' with existing initializer 'val_30'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_11' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_19' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_21' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_28' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_34' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_41' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_42' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_49' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_54' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_61' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_62' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_69' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_74' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_81' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_82' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_89' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_94' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_101' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_102' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_109' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_114' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_121' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_122' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_129' with existing initializer 'val_27'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_144' with existing initializer 'val_18'
+[2026-03-02 20:15:36,880][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_151' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_152' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_159' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_164' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_171' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_172' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_179' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_184' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_191' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_192' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_199' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_204' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_211' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_212' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_219' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_224' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_231' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_232' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_239' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_244' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_251' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_252' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_259' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_274' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_281' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_282' with existing initializer 'val_18'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_289' with existing initializer 'val_27'
+[2026-03-02 20:15:36,881][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_294' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_301' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_302' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_309' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_314' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_321' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_322' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_329' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_334' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_341' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_342' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_349' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_354' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_361' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_362' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_369' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_374' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_381' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_382' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_389' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_404' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_411' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_412' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_419' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_424' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_431' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_432' with existing initializer 'val_18'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_439' with existing initializer 'val_27'
+[2026-03-02 20:15:36,882][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_444' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_451' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_452' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_459' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_464' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_471' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_472' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_479' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_484' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_491' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_492' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_499' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_504' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_511' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_512' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_519' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_534' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_541' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_542' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_549' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_554' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_561' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_562' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_569' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_574' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_581' with existing initializer 'val_27'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_582' with existing initializer 'val_18'
+[2026-03-02 20:15:36,883][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_589' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_594' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_601' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_602' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_609' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_614' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_621' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_622' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_629' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_634' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_641' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_642' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_649' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_664' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_671' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_672' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_679' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_684' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_691' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_692' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_699' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_704' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_711' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_712' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_719' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_724' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_731' with existing initializer 'val_27'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_732' with existing initializer 'val_18'
+[2026-03-02 20:15:36,884][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_739' with existing initializer 'val_27'
+[2026-03-02 20:15:36,885][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_744' with existing initializer 'val_18'
+[2026-03-02 20:15:36,885][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_751' with existing initializer 'val_27'
+[2026-03-02 20:15:36,885][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_752' with existing initializer 'val_18'
+[2026-03-02 20:15:36,885][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_759' with existing initializer 'val_27'
+[2026-03-02 20:15:36,885][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_764' with existing initializer 'val_18'
+[2026-03-02 20:15:36,885][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_771' with existing initializer 'val_27'
+[2026-03-02 20:15:36,885][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_772' with existing initializer 'val_18'
+[2026-03-02 20:15:36,885][onnx_ir.passes.common.initializer_deduplication][INFO] - Replaced initializer 'val_779' with existing initializer 'val_27'
