@@ -1,5 +1,6 @@
 defaults:
-  - seed: default
   - model: default 
   - data: default
   - trainer: default
+
+seed: 1337
