@@ -64,15 +64,13 @@ class Block(nn.Module):
         x = x + self.ffwd(self.ln2(x))
         return x
 
-# --- PyTorch Lightning Wrapper ---
 class GPTLightningModule(pl.LightningModule):
     def __init__(self, vocab_size, cfg):
         super().__init__()
-        self.save_hyperparameters() # Tự động lưu cfg vào checkpoint
+        self.save_hyperparameters() 
         self.cfg = cfg
         self.block_size = cfg.model.block_size
         
-        # Khởi tạo mạng lưới
         self.token_embedding_table = nn.Embedding(vocab_size, cfg.model.n_embd)
         self.position_embedding_table = nn.Embedding(cfg.model.block_size, cfg.model.n_embd)
         self.blocks = nn.Sequential(*[

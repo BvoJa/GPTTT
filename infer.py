@@ -6,12 +6,10 @@ from src.model import GPTLightningModule
 
 @hydra.main(version_base=None, config_path="configs", config_name="config")
 def main(cfg: DictConfig):
-    # 1. Khởi tạo DataModule để lấy vocab_size
     datamodule = CharDataModule(cfg)
     datamodule.setup()
     vocab_size = datamodule.vocab_size
 
-    # 2. Xác định thiết bị (Tự động chọn GPU nếu có)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"--- Running inference on: {device} ---")
 

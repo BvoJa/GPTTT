@@ -24,7 +24,6 @@ class CharDataModule(pl.LightningDataModule):
         self.block_size = cfg.data.block_size
         self.batch_size = cfg.data.batch_size
         
-        # Sẽ được khởi tạo trong setup()
         self.vocab_size = 0
         self.stoi = {}
         self.itos = {}
