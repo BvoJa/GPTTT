@@ -1,6 +1,7 @@
-# test_onnx.py
-import onnxruntime as ort
+from fastapi import FastAPI
 import numpy as np
+import onnxruntime as ort
+import socket
 
 def generate_onnx(session, idx, max_new_tokens, block_size):
     input_name = session.get_inputs()[0].name
@@ -29,23 +30,34 @@ def generate_onnx(session, idx, max_new_tokens, block_size):
         
     return idx
 
-def main():
-    onnx_path = "model.onnx"
-    
-    session = ort.InferenceSession(onnx_path)
 
-    with open('input.txt', 'r', encoding='utf-8') as f:
-        text = f.read()
+onnx_path = "app/model.onnx"
+    
+session = ort.InferenceSession(onnx_path)
 
-    chars = sorted(list(set(text)))
-    vocab_size = len(chars)
-    stoi = {ch: i for i, ch in enumerate(chars)}
-    itos = {i: ch for i, ch in enumerate(chars)}
-    
-    block_size = 256 
-    
-    prompt = "O Romeo, Romeo! wherefore "
-    context = [stoi[c] for c in prompt if c in stoi]
+with open('app/input.txt', 'r', encoding='utf-8') as f:
+    text = f.read()
+
+chars = sorted(list(set(text)))
+vocab_size = len(chars)
+stoi = {ch: i for i, ch in enumerate(chars)}
+itos = {i: ch for i, ch in enumerate(chars)}
+
+block_size = 256 
+
+app = FastAPI()
+
+@app.get('/')
+def read_root():
+    return {
+        'message': 'GPT model API',
+        'worker': socket.gethostname()
+    }
+
+@app.post('/predict')
+def predict(data: dict):
+    # prompt = "O Romeo, Romeo! wherefore "
+    context = [stoi[c] for c in data["prompt"] if c in stoi]
     idx = np.array([context], dtype=np.int64) 
     
     generated_idx = generate_onnx(
@@ -56,7 +68,8 @@ def main():
     )
     
     generated_text = "".join([itos[int(i)] for i in generated_idx[0]])
-    print(generated_text)
 
-if __name__ == "__main__":
-    main()
+    return {
+        'sentence' : generated_text,
+        'worker': socket.gethostname()
+    }
